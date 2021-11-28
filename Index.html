@@ -5,16 +5,18 @@
         <title>Desafio - Yooper</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Criar layout e codificar uma landing page nas versões mobile e desktop (Não utilizar
+        nenhum framework e template pronto).">
         <!-- css interno -->
         <link rel="stylesheet" href="css/estilo.css">
     </head>
     <body>
         <!-- cabeçalho -->
         <header> 
-            <picture>
+            <div>
                 <img src="img/icone/instagram.png" alt="acesse nosso instagram" title="acesse nosso instagram">
                 <img class="" src="img/icone/linkedin-logo.png" alt="acesse nosso Linkedin" title="acesse nosso Linkedin">
-            </picture>
+            </div>
             <div class="header-texto">
                 <p>Frete para todo Brasil <i class="fas fa-truck"></i></p>
             </div>
@@ -22,17 +24,17 @@
         <!-- menu -->
         <nav> 
             <ul class="nav-menu">
-                <li><a href="" title="">Inicio</a></li>
-                <li><a href="#sobre" title="">Sobre</a></li>
-                <li><a href="#servico" title="">Serviços</a></li>
-                <li><a href="#contato" title="">Contato</a></li>
+                <li><a href="" title="Inicio da pagina" tabindex="1">Inicio</a></li>
+                <li><a href="#sobre" title="Sobre a empresa" tabindex="2">Sobre</a></li>
+                <li><a href="#servico" title="Nossos serviços" tabindex="3">Serviços</a></li>
+                <li><a href="#contato" title="Fale conosco" tabindex="4">Contato</a></li>
             </ul>
         </nav>
         <!-- banner -->
         <section>
             <div class="nav-banner">
                 <div class="banner-img"><br>
-                    <h1><strong style="color: black;">Black</strong> Friday 2021</h1><br>
+                    <h1><strong class="strong">Black </strong>Friday 2021</h1><br>
                     <p class="banner-paragrafo"> Desconto progressivo com até 40% <br> na compra de 2 peças ganhe 20% <br> levando 3 peças ganhe 30%</p><br><br>
                     <button class="btn-shadow-banner btn-banner" type="button">Venha conferir!</button>
                 </div>
@@ -84,39 +86,51 @@
                 </div> 
             </section>
             <!-- parallaxx -->
-            <section class="section">
+            <section class="">
                 <div class="parallax">
                 </div>
             </section>
             <!-- serviço -->
             <section class="" id="servico">
                 <h2 class="h2-titulo h2-titulo-servico">Serviços</h2>
-                <div class="cart-row">
-                    <div class="cart">
-                        <h2 class="h2-serviço">Design</h2>
-                        <i class="fas fa-pencil-ruler i-cone"></i>
-                        <p class="servico-paragrafo">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <div class="">
+                    <div class="cart-row">
+                        <div class="cart">
+                            <h2 class="h2-serviço">Design</h2>
+                            <i class="fas fa-pencil-ruler i-cone"></i>
+                            <p class="servico-paragrafo">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="cart-row">
-                    <div class="cart">
-                        <h2 class="h2-serviço">Estilista</h2>
-                        <i class="fas fa-ruler-combined i-cone"></i>
-                        <p class="servico-paragrafo">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <div class="cart-row">
+                        <div class="cart">
+                            <h2 class="h2-serviço">Estilista</h2>
+                            <i class="fas fa-ruler-combined i-cone"></i>
+                            <p class="servico-paragrafo">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="cart-row">
-                    <div class="cart">
-                        <h2 class="h2-serviço">Pintura</h2>
-                        <i class="fas fa-fill-drip i-cone"></i>
-                        <p class="servico-paragrafo">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <div class="cart-row">
+                        <div class="cart">
+                            <h2 class="h2-serviço">Pintura</h2>
+                            <i class="fas fa-fill-drip i-cone"></i>
+                            <p class="servico-paragrafo">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
                     </div>
+                    <button class="btn-shadow-servico btn-servico" type="button">Lorem Ipsum</button>
                 </div>
-                <button class="btn-shadow-servico btn-servico" type="button">Lorem Ipsum</button>
-            </section>
+                
+            </section><br><br>
             <!-- newsletter -->
-            <section class="section">
-                <div class=""></div>
+            <section class="newslatter">
+                <form action="/action_page.php" method="post"><br>
+                    <h2 class="h2-titulo-newslatter">Newsletter</h2>
+                    <div class="newslatter-contato" >
+                        <input type="text" placeholder="Digite seu E-mail" name="mail" required>
+                        <button class="btn-shadow btn-form-newsletter" type="button" onclick="alert('Sua mensagem foi enviada com sucesso!')">Quero receber novidades!</button>
+                    </div>
+                    <div class="container">
+                        
+                    </div>
+                </form>
             </section>
             <!-- contato -->
             <section class="contato" id="contato">
@@ -126,10 +140,11 @@
                     <p class="contato-paragrafo1">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                     <form action="" method="post">
                         <fieldset>
+                            <legend>Formulario</legend>
                             <div class="formulario">
-                                <label><i class="fas fa-signature"></i> Nome: <input type="text"></label><br>
-                                <label><i class="fas fa-at"></i> E-mail: <input type="email"></label><br>
-                                <label><i class="fas fa-phone-alt"></i> Telefone: <input type="tel"></label><br><br>
+                                <label><i class="fas fa-signature"></i> Nome: <input type="text" placeholder="Digite seu nome" maxlength="30" minlength="3" required></label><br>
+                                <label><i class="fas fa-at"></i> E-mail: <input type="email" placeholder="Digite seu E-mail" required></label><br>
+                                <label><i class="fas fa-phone-alt"></i> Telefone: <input type="tel" placeholder="Digite seu Telefone" minlength="9" maxlength="8" required></label><br><br>
                                 <!-- Segestão de assunto -->
                                 <details>
                                     <summary> Sugestão de Assunto</summary>
@@ -140,7 +155,7 @@
                                     <input class="input-form" type="radio" id="javascript" name="fav_language" value="JavaScript">
                                     <label for="javascript">JavaScript</label>
                                 </details><br>
-                                <label><i class="fas fa-pen"></i> Assunto: <input type="text"></label><br><br>
+                                <label><i class="fas fa-pen"></i> Assunto: <input type="text" placeholder="Digite o assunto" maxlength="30" minlength="10" required></label><br><br>
                                 <textarea placeholder="Escreva sua mensagem" name="message" rows="10" cols="30">
                                 </textarea>
                                 <br>
@@ -154,7 +169,7 @@
         <footer>
             <div class="footer">
                 <p class="footer-paragrafo">Desenvolvido <i class="fas fa-mug-hot"></i> com Amor <i class="fas fa-heart" style="color: red;"></i> por Raul Oliveira Prado<br>
-                    <a style="color: white;" href="mailto:rauloliveiraprado@gmail.com" title="" target="_blank" >rauloliveiraprado@gmail.com</a><br>
+                    <a style="color: white;" href="mailto:rauloliveiraprado@gmail.com" title="Nosso E-mail" target="_blank" >rauloliveiraprado@gmail.com</a><br>
                     <p class="footer-paragrafo">©️ 2021</p>
                 </p>
             </div>
